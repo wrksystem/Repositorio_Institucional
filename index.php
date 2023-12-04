@@ -1,6 +1,10 @@
 <?php
 include("db/conection.php");
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,6 +88,9 @@ include("db/conection.php");
                     case 'update-author':
                         include("pages/authors/update-author.php");
                         break;
+                    case 'select-author':
+                        include("pages/authors/select-author.php");
+                        break;
                     //knowledge area section
                     case 'knowledge_areas':
                         include("pages/knowledge_areas/knowledge_areas.php");
@@ -103,6 +110,10 @@ include("db/conection.php");
                     case 'edit-knowledge_areas':
                         include("pages/knowledge_areas/edit-knowledgeAreas.php");
                         break;
+                    case 'select-knowledge_areas':
+                        include("pages/knowledge_areas/select-knowledgeAreas.php");
+                        break;
+                    
 
                     default:
                         include("pages/posts/posts.php");

@@ -13,43 +13,32 @@
     $author = mysqli_real_escape_string($conection, $_POST["author"]);
     $knowledgeArea = mysqli_real_escape_string($conection, $_POST["knowledgeAreas"]);
     $email = mysqli_real_escape_string($conection, $_POST["email"]);
-    $category = mysqli_real_escape_string($conection, $_POST["category"]);
+    //$category = mysqli_real_escape_string($conection, $_POST["category"]);
 
     
-        $sql = "INSERT INTO iniciacaocientifica (
-        Titulo,
-        Subtitulo,
-        DataDePublicacao,
-        PalavraChave,
-        Link)
-        VALUES(
-            '{$title}',
-            '{$subtitle}',
-            '{$publicationDate}',
-            '{$keyword}',
-            '{$link}'
-        );
-        INSERT INTO autor (
-        Autor,
-        Email)
-        VALUES(
-            '{$author}',
-            '{$email}'
-        );
-        INSERT INTO areasdoconhecimento (
-        nome)
-        VALUES(
-            '{$knowledgeArea}'
-        );
-        INSERT INTO formatodocumento (
-        Categoria)
-        VALUES(
-            '{$category}'
-        )
-        ";
+    $sql = "INSERT INTO iniciacaocientifica (
+    Titulo,
+    Subtitulo,
+    DataDePublicacao,
+    PalavraChave,
+    Link,
+    Autor,
+    AreasDoConhecimento,
+    Email       
+    )
+    VALUES(
+        '{$title}',
+        '{$subtitle}',
+        '{$publicationDate}',
+        '{$keyword}',
+        '{$link}',
+        '{$author}',
+        '{$knowledgeArea}',
+        '{$email}'
+    )";
         
-        mysqli_query($conection, $sql) or die("Erro ao executar a consulta". mysqli_error($conection));
+    mysqli_query($conection, $sql) or die("Erro ao executar a consulta". mysqli_error($conection));
 
-        echo "O registro foi inserido com sucesso!";
+    echo "O registro foi inserido com sucesso!";
 
 ?>

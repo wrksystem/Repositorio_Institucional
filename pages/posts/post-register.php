@@ -1,5 +1,6 @@
+
 <header>
-    <h3>CADASTRAR PUBLICAÇÃO</h3>
+    <h3><i class="bi bi-book"></i> CADASTRAR PUBLICAÇÃO</h3>
 </header>
 <div>
     <form action="index.php?menu=insert-post" method="post">
@@ -18,24 +19,35 @@
         <div class="mb-3">
             <label class="form-label" for="keywords">Palavra Chave</label>
             <input class="form-control" type="text" name="keywords">
-        </div>
+        </div>        
         <div class="mb-3">
-            <label class="form-label" for="link">Link</label>
-            <input class="form-control" type="text" name="link">
+            <label class="form-label" for="author">Selecione o Autor</label>
+            <select class="form-select" name="author" id="author">
+                <?php
+                include("pages/authors/select-author.php");
+                ?>
+            </select>
         </div>
+        
         <div class="mb-3">
-            <label class="form-label" for="author">Autor</label>
-            <input class="form-control" type="text" name="author" required>
+            <label class="form-label" for="knowledgeAreas">Selecione a Area De Conhecimento</label>
+            <select class="form-select" name="knowledgeAreas" id="knowledgeAreas">
+                <?php
+                include("pages/knowledge_areas/select-knowledgeAreas.php");
+                ?>
+            </select>
         </div>
+
         <div class="mb-3">
             <label class="form-label" for="email">E-mail</label>
             <input class="form-control" type="text" name="email" required>
         </div>
 
         <div class="mb-3">
-            <label class="form-label" for="knowledgeAreas">Areas do Conhecimento</label>
-            <input class="form-control" type="text" name="knowledgeAreas">
+            <label class="form-label" for="link">Link</label>
+            <input class="form-control" type="text" name="link">
         </div>
+
         <div class="mb-3">
             <input class="btn btn-success" type="submit" value="ADICIONAR" name="btnAdicionar">
         </div>

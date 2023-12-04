@@ -6,4 +6,5 @@ define("USUARIO", "root");
 define("SENHA", "");
 define("BANCO", "repositorio_institucional");
 
+
 ?>
