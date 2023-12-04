@@ -1,8 +1,3 @@
-<header>
-    <h3>INSERIR PUBLICAÇÃO</h3>
-</header>
-
-<!--Segunda operação do banco de ados, que seria um CREATE do CRUD-->
 <?php
 
     $title = mysqli_real_escape_string($conection, $_POST["title"]);
@@ -12,9 +7,7 @@
     $link = mysqli_real_escape_string($conection, $_POST["link"]);
     $author = mysqli_real_escape_string($conection, $_POST["author"]);
     $knowledgeArea = mysqli_real_escape_string($conection, $_POST["knowledgeAreas"]);
-    $email = mysqli_real_escape_string($conection, $_POST["email"]);
     //$category = mysqli_real_escape_string($conection, $_POST["category"]);
-
     
     $sql = "INSERT INTO iniciacaocientifica (
     Titulo,
@@ -22,9 +15,8 @@
     DataDePublicacao,
     PalavraChave,
     Link,
-    Autor,
-    AreasDoConhecimento,
-    Email       
+    Autor_id,
+    AreasDoConhecimento_idAreasDoConhecimento       
     )
     VALUES(
         '{$title}',
@@ -33,8 +25,7 @@
         '{$keyword}',
         '{$link}',
         '{$author}',
-        '{$knowledgeArea}',
-        '{$email}'
+        '{$knowledgeArea}'
     )";
         
     mysqli_query($conection, $sql) or die("Erro ao executar a consulta". mysqli_error($conection));
