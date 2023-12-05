@@ -31,7 +31,7 @@
         <?php
 
             //paginação start
-            $amount = 10;
+            $amount = 8;
             $page = (isset($_GET["page"]))?(int)$_GET["page"]:1;
             $start = ($amount * $page) - $amount;
 
