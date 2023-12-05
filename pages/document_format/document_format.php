@@ -30,7 +30,7 @@
         <?php
 
             //paginação start
-            $amount = 10;
+            $amount = 8;
             $page = (isset($_GET["page"]))?(int)$_GET["page"]:1;
             $start = ($amount * $page) - $amount;
 
@@ -73,3 +73,40 @@
         </tbody>
     </table>
 </div>
+
+<ul class="pagination justify-content-center">
+    <?php
+    //continuação paginação
+        $sqlTotal = "SELECT id FROM formatododocumento";
+        $qrTotal = mysqli_query($conection, $sqlTotal) or die("Erro ao executar a consulta!" . mysqli_error($conection));
+        $numTotal = mysqli_num_rows($qrTotal);
+        $totalPage = ceil($numTotal / $amount);
+        
+        echo "<li class='page-item'><span class='page-link'>Total Registros:" . $numTotal . "</span></li>";
+        echo '<li class="page-item"><a class="page-link" href="?menu=document_format&page=1">Primeira Página</a></li> ';
+
+        if($page > 6){
+            ?>
+                <li class="page-item"><a class="page-link" href="?menu=document_format&page=<?php echo $page-1?>"> <<< </a></li>
+            <?php
+        }
+        for($i = 1; $i <= $totalPage; $i++){    
+            if($i >= ($page - 5) && $i <= ($page + 5)){
+                if($i == $page){
+                    echo "<li class='page-item active'><span class='page-link'>$i</span></li>";
+                }else{
+                    echo "<li class='page-item'><a class='page-link' href=\"?menu=document_format&page=$i\"> $i </a></li>";
+                }
+            }
+        }
+        if($page < ($totalPage - 5)){
+            ?>
+                <li class="page-item"><a class="page-link" href="?menu=document_format&page=<?php echo $page+1?>"> >>> </a></li>
+            <?php
+        }
+
+        echo "<li class='page-item'><a class='page-link' href=\"?menu=document_format&page=$totalPage\">Ultima Página</a></li>";
+        //finalização paginação
+
+    ?>
+</ul>

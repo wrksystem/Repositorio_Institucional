@@ -80,13 +80,13 @@
         echo "<li class='page-item'><span class='page-link'>Total Registros:" . $numTotal . "</span></li>";
         echo '<li class="page-item"><a class="page-link" href="?menu=knowledge_areas&page=1">Primeira Página</a></li> ';
 
-        if($page > 3){
+        if($page > 6){
             ?>
                 <li class="page-item"><a class="page-link" href="?menu=knowledge_areas&page=<?php echo $page-1?>"> <<< </a></li>
             <?php
         }
         for($i = 1; $i <= $totalPage; $i++){    
-            if($i >= ($page - 2) && $i <= ($page + 2)){
+            if($i >= ($page - 5) && $i <= ($page + 5)){
                 if($i == $page){
                     echo "<li class='page-item active'><span class='page-link'>$i</span></li>";
                 }else{
@@ -94,7 +94,7 @@
                 }
             }
         }
-        if($page < ($totalPage - 2)){
+        if($page < ($totalPage - 5)){
             ?>
                 <li class="page-item"><a class="page-link" href="?menu=knowledge_areas&page=<?php echo $page+1?>"> >>> </a></li>
             <?php

@@ -108,7 +108,7 @@
             <?php
         }
         for($i = 1; $i <= $totalPage; $i++){    
-            if($i >= ($page - 5) && $i <= ($page + 2)){
+            if($i >= ($page - 5) && $i <= ($page + 5)){
                 if($i == $page){
                     echo "<li class='page-item active'><span class='page-link'>$i</span></li>";
                 }else{
