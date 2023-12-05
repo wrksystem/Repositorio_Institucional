@@ -38,7 +38,10 @@ error_reporting(E_ALL);
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="index.php?menu=knowledge_areas">Areas de Conhecimento</a>
-                        </li>                        
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.php?menu=document_format">Formato de Documento</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -113,7 +116,29 @@ error_reporting(E_ALL);
                     case 'select-knowledge_areas':
                         include("pages/knowledge_areas/select-knowledgeAreas.php");
                         break;
-                    
+                    //document format section
+                    case 'document_format':
+                        include("pages/document_format/document_format.php");
+                        break;
+                    case 'document_format-register':
+                        include("pages/document_format/document_format-register.php");
+                        break;
+                    case 'insert-document_format':
+                        include("pages/document_format/insert-document_format.php");
+                        break;
+                    case 'edit-document_format':
+                        include("pages/document_format/edit-document_format.php");
+                        break;
+                    case 'delete-document_format':
+                        include("pages/document_format/delete-document_format.php");
+                        break;
+                    case 'update-document_format':
+                        include("pages/document_format/update-document_format.php");
+                        break;
+                    case 'select-document_format':
+                        include("pages/document_format/select-document_format.php");
+                        break;
+                    //routes end                             
 
                     default:
                         include("pages/posts/posts.php");

@@ -4,7 +4,7 @@
 
 <?php
 
-    $idRegister = mysqli_real_escape_string($conection, $_POST["idCadastro"]);
+    $idCadastro = mysqli_real_escape_string($conection, $_POST["idCadastro"]);
     $title = mysqli_real_escape_string($conection, $_POST["Titulo"]);
     $subtitle = mysqli_real_escape_string($conection, $_POST["Subtitulo"]);
     $publicationDate = mysqli_real_escape_string($conection, $_POST["DataDePublicacao"]);
@@ -12,14 +12,16 @@
     $link = mysqli_real_escape_string($conection, $_POST["Link"]);
     $author = mysqli_real_escape_string($conection, $_POST["Autor"]);
     $knowledgeArea = mysqli_real_escape_string($conection, $_POST["AreasDoConhecimento"]);
+    $category = mysqli_real_escape_string($conection, $_POST["Categoria"]);
 
     $sql = "UPDATE iniciacaocientifica SET
         Titulo = '{$title}',
         Subtitulo = '{$subtitle}',
         DataDePublicacao = '{$publicationDate}',
         PalavraChave = '{$keyword}',
+        Categoria = '{$category}',    
         Link = '{$link}',
-        Auto = '{$author}',
+        Autor = '{$author}',
         AreasDoConhecimento = '{$knowledgeArea}'
         WHERE idCadastro = '{$idCadastro}'
         ";

@@ -7,7 +7,7 @@
     $link = mysqli_real_escape_string($conection, $_POST["link"]);
     $author = mysqli_real_escape_string($conection, $_POST["author"]);
     $knowledgeArea = mysqli_real_escape_string($conection, $_POST["knowledgeAreas"]);
-    //$category = mysqli_real_escape_string($conection, $_POST["category"]);
+    $category = mysqli_real_escape_string($conection, $_POST["category"]);
     
     $sql = "INSERT INTO iniciacaocientifica (
     Titulo,
@@ -16,7 +16,8 @@
     PalavraChave,
     Link,
     Autor_id,
-    AreasDoConhecimento_idAreasDoConhecimento       
+    AreasDoConhecimento_idAreasDoConhecimento,
+    FormatoDoDocumento_id
     )
     VALUES(
         '{$title}',
@@ -25,7 +26,8 @@
         '{$keyword}',
         '{$link}',
         '{$author}',
-        '{$knowledgeArea}'
+        '{$knowledgeArea}',
+        '{$category}'
     )";
         
     mysqli_query($conection, $sql) or die("Erro ao executar a consulta". mysqli_error($conection));

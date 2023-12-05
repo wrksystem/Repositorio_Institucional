@@ -7,7 +7,7 @@
 </div>
 
 <div>
-    <form action="index.php?menu=authors" method="post">
+    <form action="index.php?menu=posts" method="post">
         <div class="input-group">
             <input class="form-control" type="text" name="search">
             <button class="btn btn-primary btn-sn" type="submit"><i class="bi bi-search"></i>PESQUISAR</button>
@@ -20,15 +20,16 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Título</th>
-            <th>Subtítulo</th>
-            <th>Data de Publicação</th>
-            <th>Autor</th>
-            <th>Areas Do Conhecimento</th>
-            <th>Palavra Chave</th>
-            <th>Link</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th class="text-center">Título</th>
+            <th class="text-center">Subtítulo</th>
+            <th class="text-center">Data de Publicação</th>
+            <th class="text-center">Autor</th>            
+            <th class="text-center">Palavra Chave</th>
+            <th class="text-center">Areas Do Conhecimento</th>
+            <th class="text-center">Categoria</th>
+            <th class="text-center">Link</th>
+            <th class="text-center">Edit</th>
+            <th class="text-center">Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -48,13 +49,17 @@
         upper(titulo) AS titulo,
         upper(Subtitulo) AS Subtitulo,
         DATE_FORMAT(DataDePublicacao,'%d/%m/%Y') AS DataDePublicacao,
-        upper(PalavraChave) AS PalavraChave,
-        lower(Link) AS Link
+        upper(Autor_id) AS Autor_id,
+        upper(PalavraChave) AS PalavraChave,        
+        upper(AreasDoConhecimento_idAreasDoConhecimento) AS AreasDoConhecimento_idAreasDoConhecimento,
+        upper(FormatoDoDocumento_id) AS FormatoDoDocumento_id,
+        Link AS Link
         FROM iniciacaocientifica
 
         WHERE         
             idCadastro = '{$search}' OR
-            titulo LIKE '%{$search}%'
+            titulo LIKE '{$search}' OR
+            Subtitulo LIKE '%{$search}%'
             ORDER BY titulo ASC
             LIMIT $start, $amount        
         ";
@@ -65,16 +70,17 @@
     
             ?>
                 <tr>
-                    <td><?=$data["idCadastro"] ?></td>
-                    <td class="text-nowrap"><?=$data["Titulo"] ?></td>
-                    <td class="text-nowrap"><?=$data["Subtitulo"] ?></td>
-                    <td class="text-nowrap"><?=$data["DataDePublicacao"] ?></td>
-                    <td class="text-nowrap"><?=$data["Autor"] ?></td>
-                    <td class="text-nowrap"><?=$data["PalavraChave"] ?></td>
-                    <td class="text-nowrap"><?=$data["AreaDoConhecimento"] ?></td>
-                    <td class="text-nowrap"><a class="btn bi bi-file-pdf-fill"></a> <?=$data["Link"] ?></td>    
-                    <td class="text-center"><a class="btn btn-warning btn-sm" href="index.php?menu=edit-post&idCadastro=<?=$data["idCadastro"]?>"><i class="bi bi-pencil-square"></i></a></td>
-                    <td class="text-center"><a class="btn btn-danger btn-sm" href="index.php?menu=delete-post&idCadastro=<?=$data["idCadastro"]?>"><i class="bi bi-trash-fill"></i></a></td>
+                    <td class="text-center"><?=$data["idCadastro"] ?></td>
+                    <td class="text-center"><?=$data["titulo"] ?></td>
+                    <td class="text-center"><?=$data["Subtitulo"] ?></td>
+                    <td class="text-nowrap text-center"><?=$data["DataDePublicacao"] ?></td>
+                    <td class="text-nowrap text-center"><?=$data["Autor_id"] ?></td>
+                    <td class="text-nowrap text-center"><?=$data["PalavraChave"] ?></td>
+                    <td class="text-nowrap text-center"><?=$data["AreasDoConhecimento_idAreasDoConhecimento"] ?></td>
+                    <td class="text-nowrap text-center"><?=$data["FormatoDoDocumento_id"] ?></td>
+                    <td class="text-center text-center"><a class="bi bi-file-pdf-fill btn-danger btn-sm align-middle" href="<?=$data["Link"]?>" target="_blank"></a></td>    
+                    <td class="text-center text-center"><a class="btn btn-warning btn-sm" href="index.php?menu=edit-post&idCadastro=<?=$data["idCadastro"]?>"><i class="bi bi-pencil-square"></i></a></td>
+                    <td class="text-center text-center"><a class="btn btn-danger btn-sm" href="index.php?menu=delete-post&idCadastro=<?=$data["idCadastro"]?>"><i class="bi bi-trash-fill"></i></a></td>
                 </tr>
         
             <?php
