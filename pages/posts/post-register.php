@@ -63,7 +63,7 @@
         </div>
 
         <div class="mb-3">
-            <label class="form-label" for="category">Selecione a Area De Conhecimento</label>
+            <label class="form-label" for="category">Selecione a Categoria</label>
             <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-list"></i></span>
                 <select class="form-select form-control" name="category" id="category">
@@ -71,16 +71,6 @@
                     include("pages/document_format/select-document_format.php");
                     ?>
                 </select>
-            </div>
-        </div>
-
-
-
-        <div class="mb-3">
-            <label class="form-label" for="email">E-mail</label>
-            <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                <input class="form-control" type="text" name="email" required>
             </div>
         </div>
 

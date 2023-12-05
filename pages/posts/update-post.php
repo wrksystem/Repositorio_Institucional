@@ -19,10 +19,10 @@
         Subtitulo = '{$subtitle}',
         DataDePublicacao = '{$publicationDate}',
         PalavraChave = '{$keyword}',
-        Categoria = '{$category}',    
+        FormatoDoDocumento_id = '{$category}',    
         Link = '{$link}',
-        Autor = '{$author}',
-        AreasDoConhecimento = '{$knowledgeArea}'
+        Autor_id = '{$author}',
+        AreasDoConhecimento_idAreasDoConhecimento = '{$knowledgeArea}'
         WHERE idCadastro = '{$idCadastro}'
         ";
         mysqli_query($conection, $sql) or die("Erro ao executar a consulta". mysqli_error($conection));

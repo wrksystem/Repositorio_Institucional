@@ -46,7 +46,7 @@
 
         $sql = "SELECT
         idCadastro,
-        upper(titulo) AS titulo,
+        upper(Titulo) AS Titulo,
         upper(Subtitulo) AS Subtitulo,
         DATE_FORMAT(DataDePublicacao,'%d/%m/%Y') AS DataDePublicacao,
         upper(Autor_id) AS Autor_id,
@@ -58,9 +58,10 @@
 
         WHERE         
             idCadastro = '{$search}' OR
-            titulo LIKE '{$search}' OR
-            Subtitulo LIKE '%{$search}%'
-            ORDER BY titulo ASC
+            Titulo LIKE '%{$search}%' OR
+            Subtitulo LIKE '%{$search}%' OR
+            PalavraChave LIKE '%{$search}%'
+            ORDER BY Titulo ASC
             LIMIT $start, $amount        
         ";
 
@@ -71,7 +72,7 @@
             ?>
                 <tr>
                     <td class="text-center"><?=$data["idCadastro"] ?></td>
-                    <td class="text-center"><?=$data["titulo"] ?></td>
+                    <td class="text-center"><?=$data["Titulo"] ?></td>
                     <td class="text-center"><?=$data["Subtitulo"] ?></td>
                     <td class="text-nowrap text-center"><?=$data["DataDePublicacao"] ?></td>
                     <td class="text-nowrap text-center"><?=$data["Autor_id"] ?></td>
