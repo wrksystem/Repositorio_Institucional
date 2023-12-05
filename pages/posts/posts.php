@@ -79,7 +79,7 @@
                         <td class="text-nowrap text-center"><?=$data["PalavraChave"] ?></td>
                         <td class="text-nowrap text-center"><?=$data["AreasDoConhecimento_idAreasDoConhecimento"] ?></td>
                         <td class="text-nowrap text-center"><?=$data["FormatoDoDocumento_id"] ?></td>
-                        <td class="text-center text-center"><a class="bi bi-file-pdf-fill btn-danger btn-sm align-middle" href="<?=$data["Link"]?>" target="_blank"></a></td>    
+                        <td class="text-center text-center"><a class="bi bi-file-pdf-fill btn-dark btn-sm align-middle" href="<?=$data["Link"]?>" target="_blank"></a></td>    
                         <td class="text-center text-center"><a class="btn btn-warning btn-sm" href="index.php?menu=edit-post&idCadastro=<?=$data["idCadastro"]?>"><i class="bi bi-pencil-square"></i></a></td>
                         <td class="text-center text-center"><a class="btn btn-danger btn-sm" href="index.php?menu=delete-post&idCadastro=<?=$data["idCadastro"]?>"><i class="bi bi-trash-fill"></i></a></td>
                     </tr>
