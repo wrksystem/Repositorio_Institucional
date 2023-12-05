@@ -92,38 +92,38 @@
 </div>
 
 <ul class="pagination justify-content-center">
-<?php
-//continuação paginação
-    $sqlTotal = "SELECT idCadastro FROM iniciacaocientifica";
-    $qrTotal = mysqli_query($conection, $sqlTotal) or die("Erro ao executar a consulta!" . mysqli_error($conection));
-    $numTotal = mysqli_num_rows($qrTotal);
-    $totalPage = ceil($numTotal / $amount);
-    
-    echo "<li class='page-item'><span class='page-link'>Total Registros:" . $numTotal . "</span></li>";
-    echo '<li class="page-item"><a class="page-link" href="?menuop=post&page=1">Primeira Página</a></li> ';
+    <?php
+    //continuação paginação
+        $sqlTotal = "SELECT idCadastro FROM iniciacaocientifica";
+        $qrTotal = mysqli_query($conection, $sqlTotal) or die("Erro ao executar a consulta!" . mysqli_error($conection));
+        $numTotal = mysqli_num_rows($qrTotal);
+        $totalPage = ceil($numTotal / $amount);
+        
+        echo "<li class='page-item'><span class='page-link'>Total Registros:" . $numTotal . "</span></li>";
+        echo '<li class="page-item"><a class="page-link" href="?menuop=post&page=1">Primeira Página</a></li> ';
 
-    if($page > 3){
-        ?>
-            <li class="page-item"><a class="page-link" href="?menu=post&page=<?php echo $page-1?>"> <<< </a></li>
-        <?php
-    }
-    for($i = 1; $i <= $totalPage; $i++){    
-        if($i >= ($page - 2) && $i <= ($page + 2)){
-            if($i == $page){
-                echo "<li class='page-item active'><span class='page-link'>$i</span></li>";
-            }else{
-                echo "<li class='page-item'><a class='page-link' href=\"?menu=post&page=$i\"> $i </a></li>";
+        if($page > 3){
+            ?>
+                <li class="page-item"><a class="page-link" href="?menu=post&page=<?php echo $page-1?>"> <<< </a></li>
+            <?php
+        }
+        for($i = 1; $i <= $totalPage; $i++){    
+            if($i >= ($page - 2) && $i <= ($page + 2)){
+                if($i == $page){
+                    echo "<li class='page-item active'><span class='page-link'>$i</span></li>";
+                }else{
+                    echo "<li class='page-item'><a class='page-link' href=\"?menu=post&page=$i\"> $i </a></li>";
+                }
             }
         }
-    }
-    if($page < ($totalPage - 2)){
-        ?>
-            <li class="page-item"><a class="page-link" href="?menu=post&page=<?php echo $page+1?>"> >>> </a></li>
-        <?php
-    }
+        if($page < ($totalPage - 2)){
+            ?>
+                <li class="page-item"><a class="page-link" href="?menu=post&page=<?php echo $page+1?>"> >>> </a></li>
+            <?php
+        }
 
-    echo "<li class='page-item'><a class='page-link' href=\"?menu=post&page=$totalPage\">Ultima Página</a></li>";
-    //finalização paginação
+        echo "<li class='page-item'><a class='page-link' href=\"?menu=post&page=$totalPage\">Ultima Página</a></li>";
+        //finalização paginação
 
-?>
+    ?>
 </ul>
