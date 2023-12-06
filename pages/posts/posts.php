@@ -79,12 +79,12 @@
                 ?>
                     <tr>
                         <td class="text-center"><?=$data["idCadastro"] ?></td>
-                        <td class="text-center"><?=$data["nomeTitulo"] ?></td>
-                        <td class="text-center"><?=$data["nomeSubtitulo"] ?></td>
+                        <td class="my_class_text text-center"><?=$data["nomeTitulo"] ?></td>
+                        <td class="my_class_text text-center"><?=$data["nomeSubtitulo"] ?></td>
                         <td class="text-nowrap text-center"><?=$data["DataDePublicacao"] ?></td>
-                        <td class="text-center"><?=$data["nomeAutor"] ?></td>
-                        <td class="text-center"><?=$data["nomePalavraChave"] ?></td>
-                        <td class="text-center"><?=$data["nomeConhecimento"] ?></td>
+                        <td class="my_class_text text-center"><?=$data["nomeAutor"] ?></td>
+                        <td class="my_class_text text-center"><?=$data["nomePalavraChave"] ?></td>
+                        <td class="my_class_text text-center"><?=$data["nomeConhecimento"] ?></td>
                         <td class="text-center"><?=$data["nomeCategoria"] ?></td>
                         <td class="text-center text-center"><a class="bi bi-file-pdf-fill btn-dark btn-sm align-middle" href="<?=$data["nomeLink"]?>" target="_blank"></a></td>    
                         <td class="text-center text-center"><a class="btn btn-warning btn-sm" href="index.php?menu=edit-post&idCadastro=<?=$data["idCadastro"]?>"><i class="bi bi-pencil-square"></i></a></td>

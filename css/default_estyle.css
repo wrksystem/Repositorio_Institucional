@@ -6,3 +6,7 @@ body{
 .navbar-brand{
     display: flex;
 }
+
+.my_class_text{
+    font-size: 12px;
+}
