@@ -21,7 +21,7 @@
         </div>                
     
         <div class="row container">
-            <div class="mb-3 coll">
+            <div class="mb-3 coll-3">
                 <label class="form-label" for="publicationDate">Data de Publicação</label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-calendar"></i></span>
@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="mb-3 coll">
+            <div class="mb-3 coll-3">
                 <label class="form-label" for="keywords">Palavra Chave</label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-search"></i></span>
@@ -37,7 +37,7 @@
                 </div>
             </div>    
         
-            <div class="mb-3 coll">
+            <div class="mb-3 coll-3">
                 <label class="form-label" for="author">Selecione o Autor</label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
@@ -49,30 +49,32 @@
                 </div>
             </div>
             
-            <div class="mb-3 coll">
-                <label class="form-label" for="knowledgeAreas">Selecione a Area De Conhecimento</label>
+            <div class="mb-3 coll-3">
+                <label class="form-label" for="category">Selecione a Categoria</label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-list"></i></span>
-                    <select class="form-select form-control" name="knowledgeAreas" id="knowledgeAreas">
+                    <select class="form-select form-control" name="category" id="category">
                         <?php
-                        include("pages/knowledge_areas/select-knowledgeAreas.php");
+                        include("pages/document_format/select-document_format.php");
                         ?>
                     </select>
                 </div>
             </div>
         </div>
 
-        <div class="mb-3">
-            <label class="form-label" for="category">Selecione a Categoria</label>
-            <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-list"></i></span>
-                <select class="form-select form-control" name="category" id="category">
-                    <?php
-                    include("pages/document_format/select-document_format.php");
-                    ?>
-                </select>
-            </div>
-        </div>
+        <div class="row container">
+            <div class="mb-3 coll-6">
+                    <label class="form-label" for="knowledgeAreas">Selecione a Area De Conhecimento</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-list"></i></span>
+                        <select class="form-select form-control" name="knowledgeAreas" id="knowledgeAreas">
+                            <?php
+                            include("pages/knowledge_areas/select-knowledgeAreas.php");
+                            ?>
+                        </select>
+                    </div>
+            </div>            
+        </div>       
 
         <div class="mb-3">
             <label class="form-label" for="link">Link</label>
