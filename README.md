@@ -1,10 +1,11 @@
 # PROJETO DE EXTENSÃO ACADÊMICA
 Aplicando os conceitos estudados durante o semestre, onde o foco principal foi o estudo e estulização de SGBDS, montamos esse projeto, baseando assim nesses conteúdos e matérias.
 
-### Werik Rodrigues de Andrade
-### Glayson de Morais da Silva
-### Phelipe Silva Botelho
-### Raphael
+#### INTEGRANTES
+Werik Rodrigues de Andrade</br>
+Glayson de Morais da Silva</br>
+Phelipe Silva Botelho</br>
+Raphael Brazier Costa</br>
 
 ## QUAL OBJETIVO DO PROJETO DE EXTENSÃO ACADÊMICA?
 
@@ -22,6 +23,23 @@ Bom, um repositório insitucional é um sistema de informação que servem para 
 
 A partir disso fizemos as reuniões necessárias para entender o contexto de atuação, o público que utiliza tal ferramenta, quais os benefícios da aplicação e desenvolvimento da mesma para assim estabelecer as etapas iniciais do projeto, e optamos assim por desenvolver um MVP.
 
-
-
 ## ETAPAS DO PROJETO:
+Nas etapas inciais, classificamos os requisitos básicos para o desenvolvimento e funcionamento de um MVP que emule o funcionamento de um Repositório Institucional utilizando o MySQL como SGBD. Após os requisitos definidos, também estipulamos as tecnologias necessárias para o desenvolvimento rápido, de fácil integração de forma que nós alunos pudéssemos desenvolver sem grandes dificuldades.
+
+## TECNOLOGIAS E FERRAMENTAS:
+
+PHP- Linguagem de programação interpretada, que fácil usabilidade e aprendizado para agilizar o desenvolvimento da ferramenta.</br>
+Bootstrap 4 - Framework web de código aberto para desenvolvimento de componentes de interface front-end e web para sites e aplicações utilizando HTML, CSS e JavaScript.</br>
+HTML - Linguagem de marcação utiliza para estruturar as páginas HTML.</br>
+CSS - Linguagem de estilização para página web aplicado as tag HTML.</br>
+XAMPP - Pacote com os principais servidores de código aberto, incluíndo o MySQL e Apache.</br>
+
+MySQL Workbench - Ferramenta de design de banco de dados visual que integra desenvolvimento SQL, administração, design de banco de dados, criação e manutenção em um único ambiente de desenvolvimento integrado para o SGBD MySQL.</br>
+
+Git/GitHub - Sistema de versionamento de código, usado para desenvolvimento de software, e histórico de edições, aliado ao GitHub que é uma plataforma de hospedagem de código fonte que usa o Git, e permite que seus usuários mantenham seus código de forma online, pública e privada.
+
+
+
+
+
+
