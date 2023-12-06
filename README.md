@@ -38,6 +38,9 @@ MySQL Workbench - Ferramenta de design de banco de dados visual que integra dese
 
 Git/GitHub - Sistema de versionamento de código, usado para desenvolvimento de software, e histórico de edições, aliado ao GitHub que é uma plataforma de hospedagem de código fonte que usa o Git, e permite que seus usuários mantenham seus código de forma online, pública e privada.
 
+## DESAFIOS DE DESENVOLVIMENTO:
+Apesar de já ter familiaridade com PHP, MySQL e CSS, ainda sim, tive grandes desafios dentro deste projeto. A elaboração do Designe de forma que ficasse o mais parecido com o da universidade utilizando apenas o Bootstrap foi um destes desafios. Quantidade de código desenvolvido, tempo para o desenvolvimento, teste e refinamento do sistema, em conjunto do banco de dados e como principal desafio, que era o principal a ser observado devido a proposta de estudo sobre os SBGDS desse período, concerteza a criação de querys sql minimamente performáticas, funcionais, aplicando as operações básicas de um CRUD, create, read, update e delete, além da utilização de LEFT JOINs foi o principal desafio.
+
 ## VISUALIZAÇÃO DO SISTEMA 
 https://github.com/wrksystem/Repositorio_Institucional/assets/51803873/187577be-e867-487d-9b48-15c242467994
 
@@ -54,6 +57,11 @@ Bootstrap 4: https://getbootstrap.com/</br>
 VSCode: https://code.visualstudio.com/</br>
 Composer: https://getcomposer.org/</br>
 Git: https://git-scm.com/downloads</br>
+MySQL Workbench: https://www.mysql.com/products/workbench/</br>
+
+## OBSERVAÇÃO.
+Esse sistema é um MVP do que seria um repositório institucional. Para a utilização plena em produção é recomendado a criação de um sistema de validação de usuários, sistema de permissões de usuários, além de permitir que pessoas que não sejam da institução possam visualizar e baixar os conteúdos disponibilizados no mesmo. Utilize como base e exemplo de algo a ser construído e melhorado.
+
 
 
 
