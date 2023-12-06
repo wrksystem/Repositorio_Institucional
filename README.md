@@ -38,6 +38,34 @@ MySQL Workbench - Ferramenta de design de banco de dados visual que integra dese
 
 Git/GitHub - Sistema de versionamento de código, usado para desenvolvimento de software, e histórico de edições, aliado ao GitHub que é uma plataforma de hospedagem de código fonte que usa o Git, e permite que seus usuários mantenham seus código de forma online, pública e privada.
 
+## VISUALIZAÇÃO DO SISTEMA 
+https://github.com/wrksystem/Repositorio_Institucional/assets/51803873/187577be-e867-487d-9b48-15c242467994
+
+## CONCLUSÃO
+A utilização de um REPOSITÓRIO INSTITUCIONAL é de grande benefício para a institucição como um todo, pois a partir deste é possível divulgar os trabalhos, projetos, monografias e pesquisas que estão sendo e foram desenvolvidas dentro da faculdade, mostrando a competências de seus graduandos e professores que os auxiliam. A partir é possível perceber que tal projeto além de beneficiar a instituição também é em pró da comunidade e sociedade que é influênciada por esta, pois mostra o prestígio de seu corpo docente e discente além de servir de referência para profissionais do setor e permitir que os futuros alunos tenham uma idéia do que é possível desenvoler a partir da educação.
+
+
+## UTILIZANDO O PROJETO
+
+Para utilizar este projeto é necessário criar um SGBD MySQL, utilizando o arquivo que estará disponível na pasta src. Executando este arquivo e com o banco de dados criado, é necessário redefinir as variáveis do config.php com os dados de usuário do SGBD instalado em sua máquina.
+
+Donwload e Instalação do XAMPP: https://www.apachefriends.org/pt_br/index.html</br>
+Bootstrap 4: https://getbootstrap.com/</br>
+VSCode: https://code.visualstudio.com/</br>
+Composer: https://getcomposer.org/</br>
+Git: https://git-scm.com/downloads</br>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
