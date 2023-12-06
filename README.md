@@ -1,5 +1,5 @@
 # PROJETO DE EXTENSÃO ACADÊMICA
-Aplicando os conceitos estudados durante o semestre, onde o foco principal foi o estudo e estulização de SGBDS, montamos esse projeto, baseando assim nesses conteúdos e matérias.
+Aplicando os conceitos estudados durante o semestre, onde o foco principal foi o estudo e ulização de SGBDS, montamos esse projeto, baseando assim nesses conteúdos e materiais.
 
 #### INTEGRANTES
 Werik Rodrigues de Andrade</br>
@@ -9,13 +9,13 @@ Raphael Brazier Costa</br>
 
 ## QUAL OBJETIVO DO PROJETO DE EXTENSÃO ACADÊMICA?
 
-O Projeto de Extensão acadêmica visa solucionar problemas e dores existentes na comunidade e sociedade onde o aluno e a instituiçao interagem, de forma que amplie e aproxime a relação entre eles, envolvendo ações, palestras, capacitações, projetos e até desenvolvimento de sistemas que possam suprir tais necessidades de forma que os alunos entendem quais essas necessidades e quais essas dores para que assim possam beneficiar sua comunidade.
+O Projeto de Extensão acadêmica visa solucionar problemas e dores existentes na comunidade e sociedade onde o aluno e a instituiçao interagem, de forma que amplie e aproxime a relação entre eles, envolvendo ações, palestras, capacitações, projetos e até desenvolvimento de sistemas que possam suprir tais necessidades de forma que os alunos entendam quais essas necessidades e quais essas dores para que assim possam beneficiar sua comunidade.
 
 ## CONTEXTO DO PROJETO DE ENTESÃO ACADÊMICA:
 
 Para obter o contexto, uma pesquisa sobre os problemas que atingem nossas comunidades deveria ser realizado, e assim conversando entre nós mesmos, percebemos que tinhamos uma oportunidade. Um dos integrantes atua como Bibliotecário na institução e assim nos relatou uma de suas dores como profissional, sendo essa a falta de um repositório institucional da própria faculdade.
 
-### E o que seria um repositório institucional?Start
+### E o que seria um repositório institucional?
 
 Bom, um repositório insitucional é um sistema de informação que servem para armazenar, preservar, organizar e disseminar amplamente os resultados de pesquisa de instituições de ensino e de pesqusia, utilizando um software.
 
@@ -28,10 +28,10 @@ Nas etapas inciais, classificamos os requisitos básicos para o desenvolvimento 
 
 ## TECNOLOGIAS E FERRAMENTAS:
 
-PHP- Linguagem de programação interpretada, que fácil usabilidade e aprendizado para agilizar o desenvolvimento da ferramenta.</br>
+PHP- Linguagem de programação interpretada, de fácil usabilidade e aprendizado para agilizar o desenvolvimento da ferramenta.</br>
 Bootstrap 4 - Framework web de código aberto para desenvolvimento de componentes de interface front-end e web para sites e aplicações utilizando HTML, CSS e JavaScript.</br>
 HTML - Linguagem de marcação utiliza para estruturar as páginas HTML.</br>
-CSS - Linguagem de estilização para página web aplicado as tag HTML.</br>
+CSS - Linguagem de estilização para páginas web aplicado as tag HTML.</br>
 XAMPP - Pacote com os principais servidores de código aberto, incluíndo o MySQL e Apache.</br>
 
 MySQL Workbench - Ferramenta de design de banco de dados visual que integra desenvolvimento SQL, administração, design de banco de dados, criação e manutenção em um único ambiente de desenvolvimento integrado para o SGBD MySQL.</br>
@@ -39,13 +39,13 @@ MySQL Workbench - Ferramenta de design de banco de dados visual que integra dese
 Git/GitHub - Sistema de versionamento de código, usado para desenvolvimento de software, e histórico de edições, aliado ao GitHub que é uma plataforma de hospedagem de código fonte que usa o Git, e permite que seus usuários mantenham seus código de forma online, pública e privada.
 
 ## DESAFIOS DE DESENVOLVIMENTO:
-Apesar de já ter familiaridade com PHP, MySQL e CSS, ainda sim, tive grandes desafios dentro deste projeto. A elaboração do Designe de forma que ficasse o mais parecido com o da universidade utilizando apenas o Bootstrap foi um destes desafios. Quantidade de código desenvolvido, tempo para o desenvolvimento, teste e refinamento do sistema, em conjunto do banco de dados e como principal desafio, que era o principal a ser observado devido a proposta de estudo sobre os SBGDS desse período, concerteza a criação de querys sql minimamente performáticas, funcionais, aplicando as operações básicas de um CRUD, create, read, update e delete, além da utilização de LEFT JOINs foi o principal desafio.
+Apesar de já ter familiaridade com PHP, MySQL e CSS, ainda sim, tive grandes desafios dentro deste projeto. A elaboração do Design de forma que ficasse o mais parecido com o da universidade utilizando apenas o Bootstrap foi um destes desafios. Quantidade de código desenvolvido, tempo para o desenvolvimento, teste e refinamento do sistema, em conjunto do banco de dados e como principal desafio, que era o principal a ser observado devido a proposta de estudo sobre os SBGDS desse período, com certeza a criação de querys sql minimamente performáticas, funcionais, aplicando as operações básicas de um CRUD, create, read, update e delete, além da utilização de LEFT JOINs foi o principal desafio.
 
 ## VISUALIZAÇÃO DO SISTEMA 
 https://github.com/wrksystem/Repositorio_Institucional/assets/51803873/187577be-e867-487d-9b48-15c242467994
 
 ## CONCLUSÃO
-A utilização de um REPOSITÓRIO INSTITUCIONAL é de grande benefício para a institucição como um todo, pois a partir deste é possível divulgar os trabalhos, projetos, monografias e pesquisas que estão sendo e foram desenvolvidas dentro da faculdade, mostrando a competências de seus graduandos e professores que os auxiliam. A partir é possível perceber que tal projeto além de beneficiar a instituição também é em pró da comunidade e sociedade que é influênciada por esta, pois mostra o prestígio de seu corpo docente e discente além de servir de referência para profissionais do setor e permitir que os futuros alunos tenham uma idéia do que é possível desenvoler a partir da educação.
+A utilização de um REPOSITÓRIO INSTITUCIONAL é de grande benefício para a institucição como um todo, pois a partir deste é possível divulgar os trabalhos, projetos, monografias e pesquisas que estão sendo e foram desenvolvidas dentro da faculdade, mostrando a competências de seus graduandos e professores que os auxiliam. A partir disso é possível perceber que tal projeto além de beneficiar a instituição também é em pró da comunidade e sociedade que é influênciada direta ou indiretamente por esta, pois mostra o prestígio de seu corpo docente e discente além de servir de referência para profissionais do setor e permitir que os futuros alunos tenham uma idéia do que é possível desenvoler a partir da educação.
 
 
 ## UTILIZANDO O PROJETO
@@ -60,7 +60,7 @@ Git: https://git-scm.com/downloads</br>
 MySQL Workbench: https://www.mysql.com/products/workbench/</br>
 
 ## OBSERVAÇÃO.
-Esse sistema é um MVP do que seria um repositório institucional. Para a utilização plena em produção é recomendado a criação de um sistema de validação de usuários, sistema de permissões de usuários, além de permitir que pessoas que não sejam da institução possam visualizar e baixar os conteúdos disponibilizados no mesmo. Utilize como base e exemplo de algo a ser construído e melhorado.
+Esse sistema é um MVP do que seria um repositório institucional. Para a utilização plena em produção é recomendado a criação de um sistema de validação de usuários, sistema de permissões de usuários, além de permitir que usuários que não sejam da institução possam visualizar e baixar os conteúdos disponibilizados no mesmo. Utilize como base e exemplo de algo a ser construído e melhorado.
 
 
 
