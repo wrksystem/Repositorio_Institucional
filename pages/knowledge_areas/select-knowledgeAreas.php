@@ -9,7 +9,10 @@ $sql = "SELECT
         $queryRs = $queryKnowledge->fetch_all(MYSQLI_ASSOC);
 
         foreach($queryRs as $q){
-             echo "<option value='{$q['idAreasDoConhecimento']}'>{$q['Nome']}</option>";
-             
+                if($data['AreasDoConhecimento_idAreasDoConhecimento'] == $q['idAreasDoConhecimento']){
+                    echo "<option value='{$q['idAreasDoConhecimento']}' selected>{$q['Nome']}</option>";
+                }else{
+                    echo "<option value='{$q['idAreasDoConhecimento']}'>{$q['Nome']}</option>";
+                }             
         }
 ?>

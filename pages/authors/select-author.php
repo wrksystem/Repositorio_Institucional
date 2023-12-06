@@ -9,7 +9,10 @@ $sql = "SELECT
         $queryRs = $queryAuthor->fetch_all(MYSQLI_ASSOC);
 
         foreach($queryRs as $q){
-                echo "<option value='{$q['id']}'>{$q['Autor']}</option>";
-             
+                if($data['Autor_id'] == $q['id']){
+                    echo "<option value='{$q['id']}' selected>{$q['Autor']}</option>";
+                }else{
+                    echo "<option value='{$q['id']}'>{$q['Autor']}</option>";
+                }             
         }
 ?>

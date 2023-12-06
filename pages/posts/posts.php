@@ -44,23 +44,30 @@
         
             $search = (isset($_POST["search"]))?$_POST["search"]:"";
 
-            $sql = "SELECT
-            idCadastro,
-            upper(Titulo) AS Titulo,
-            upper(Subtitulo) AS Subtitulo,
-            DATE_FORMAT(DataDePublicacao,'%d/%m/%Y') AS DataDePublicacao,
-            upper(Autor_id) AS Autor_id,
-            upper(PalavraChave) AS PalavraChave,        
-            upper(AreasDoConhecimento_idAreasDoConhecimento) AS AreasDoConhecimento_idAreasDoConhecimento,
-            upper(FormatoDoDocumento_id) AS FormatoDoDocumento_id,
-            Link AS Link
-            FROM iniciacaocientifica
+            $sql = "SELECT 
+            IC.idCadastro,
+            UPPER(IC.Titulo) AS nomeTitulo,
+            UPPER(IC.Subtitulo) AS nomeSubtitulo,
+            DATE_FORMAT(DataDePublicacao, '%d/%m/%Y') AS DataDePublicacao,
+            UPPER(ATO.Autor) AS nomeAutor,
+            UPPER(ARC.Nome) AS nomeConhecimento,
+            UPPER(IC.PalavraChave) AS nomePalavraChave,
+            UPPER(FRD.Categoria) AS nomeCategoria,
+            IC.Link AS nomeLink 
+            FROM
+            iniciacaocientifica AS IC
+            LEFT JOIN autor AS ATO ON IC.Autor_id = ATO.id
+            LEFT JOIN areasdoconhecimento AS ARC ON IC.AreasDoConhecimento_idAreasDoConhecimento = ARC.idAreasDoConhecimento
+            LEFT JOIN formatododocumento AS FRD ON IC.FormatoDoDocumento_id = FRD.id
 
             WHERE         
                 idCadastro = '{$search}' OR
-                Titulo LIKE '%{$search}%' OR
-                Subtitulo LIKE '%{$search}%' OR
-                PalavraChave LIKE '%{$search}%'
+                IC.Titulo LIKE '%{$search}%' OR
+                IC.Subtitulo LIKE '%{$search}%' OR
+                iC.PalavraChave LIKE '%{$search}%' OR
+                ATO.Autor LIKE '%{$search}%' OR
+                ARC.Nome LIKE '%{$search}%' OR
+                FRD.Categoria LIKE '%{$search}%'
                 ORDER BY Titulo ASC
                 LIMIT $start, $amount        
             ";
@@ -72,14 +79,14 @@
                 ?>
                     <tr>
                         <td class="text-center"><?=$data["idCadastro"] ?></td>
-                        <td class="text-center"><?=$data["Titulo"] ?></td>
-                        <td class="text-center"><?=$data["Subtitulo"] ?></td>
+                        <td class="text-center"><?=$data["nomeTitulo"] ?></td>
+                        <td class="text-center"><?=$data["nomeSubtitulo"] ?></td>
                         <td class="text-nowrap text-center"><?=$data["DataDePublicacao"] ?></td>
-                        <td class="text-nowrap text-center"><?=$data["Autor_id"] ?></td>
-                        <td class="text-nowrap text-center"><?=$data["PalavraChave"] ?></td>
-                        <td class="text-nowrap text-center"><?=$data["AreasDoConhecimento_idAreasDoConhecimento"] ?></td>
-                        <td class="text-nowrap text-center"><?=$data["FormatoDoDocumento_id"] ?></td>
-                        <td class="text-center text-center"><a class="bi bi-file-pdf-fill btn-dark btn-sm align-middle" href="<?=$data["Link"]?>" target="_blank"></a></td>    
+                        <td class="text-center"><?=$data["nomeAutor"] ?></td>
+                        <td class="text-center"><?=$data["nomePalavraChave"] ?></td>
+                        <td class="text-center"><?=$data["nomeConhecimento"] ?></td>
+                        <td class="text-center"><?=$data["nomeCategoria"] ?></td>
+                        <td class="text-center text-center"><a class="bi bi-file-pdf-fill btn-dark btn-sm align-middle" href="<?=$data["nomeLink"]?>" target="_blank"></a></td>    
                         <td class="text-center text-center"><a class="btn btn-warning btn-sm" href="index.php?menu=edit-post&idCadastro=<?=$data["idCadastro"]?>"><i class="bi bi-pencil-square"></i></a></td>
                         <td class="text-center text-center"><a class="btn btn-danger btn-sm" href="index.php?menu=delete-post&idCadastro=<?=$data["idCadastro"]?>"><i class="bi bi-trash-fill"></i></a></td>
                     </tr>
