@@ -13,10 +13,10 @@ $data = mysqli_fetch_assoc($result);
     <form action="index.php?menu=update-post" method="post">
 
         <div class="mb-3">
-            <label class="form-label" for="id">ID</label>
+            <label class="form-label" for="idCadastro">ID</label>
             <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-key"></i></span>
-                <input class="form-control" type="text" name="id" value="<?= $data['idCadastro'] ?>">
+                <input class="form-control" type="text" name="idCadastro" value="<?= $data['idCadastro'] ?>">
             </div>
         </div>
         
@@ -24,7 +24,7 @@ $data = mysqli_fetch_assoc($result);
             <label class="form-label" for="title">Titulo</label>
             <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-book"></i></span>
-                <input class="form-control" type="text" name="title" value="<?= $data['Titulo'] ?>">
+                <input class="form-control" type="text" name="Titulo" value="<?= $data['Titulo'] ?>">
             </div>
         </div>
 
@@ -32,7 +32,7 @@ $data = mysqli_fetch_assoc($result);
             <label class="form-label" for="subtitle">Subtitulo</label>
             <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-book"></i></span>
-                <input class="form-control" type="text" name="subtitle" value="<?= $data['Subtitulo'] ?>">
+                <input class="form-control" type="text" name="Subtitulo" value="<?= $data['Subtitulo'] ?>">
             </div>
         </div>                
     
@@ -41,7 +41,7 @@ $data = mysqli_fetch_assoc($result);
                 <label class="form-label" for="publicationDate">Data de Publicação</label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-calendar"></i></span>
-                    <input class="form-control" type="date" name="publicationDate" value="<?= $data['DataDePublicacao'] ?>">
+                    <input class="form-control" type="date" name="DataDePublicacao" value="<?= $data['DataDePublicacao'] ?>">
                 </div>
             </div>
 
@@ -49,7 +49,7 @@ $data = mysqli_fetch_assoc($result);
                 <label class="form-label" for="keywords">Palavra Chave</label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-search"></i></span>
-                    <input class="form-control" type="text" name="keywords" value="<?= $data['PalavraChave'] ?>">
+                    <input class="form-control" type="text" name="PalavraChave" value="<?= $data['PalavraChave'] ?>">
                 </div>
             </div>    
         
@@ -57,7 +57,7 @@ $data = mysqli_fetch_assoc($result);
                 <label class="form-label" for="author">Selecione o Autor</label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
-                    <select class="form-select form-control" name="author" id="author" value="<?= $data['Autor_id'] ?>">
+                    <select class="form-select form-control" name="Autor" id="author" value="<?= $data['Autor_id'] ?>">
                         <?php
                         include("pages/authors/select-author.php");
                         ?>

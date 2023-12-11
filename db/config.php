@@ -4,7 +4,7 @@
 define("SERVIDOR", "localhost");
 define("USUARIO", "root");
 define("SENHA", "");
-define("BANCO", "repositorio_institucional");
+define("BANCO", "repositorio_insitucional02");
 
 
 ?>
